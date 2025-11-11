@@ -125,3 +125,10 @@ O MovieBuddy foi desenvolvido com o propósito de unir tecnologia e praticidade,
 Ao compreender suas preferências e comunicar-se de forma natural, o chatbot oferece sugestões precisas e inteligentes, economizando seu tempo e ampliando suas opções de entretenimento.
 
 Nosso objetivo é continuar aprimorando o MovieBuddy, incorporando novos recursos, expandindo o suporte a idiomas e tornando-o cada vez mais eficiente.
+
+## AUTORES
+
+Projeto desenvolvido pelos alunos do 6º Semestre do curso de Análise e Desenvolvimento de Sistemas da FATEC Arthur de Azevedo em Mogi-Miim
+
+**ANA BEATRIZ SANTOS LEAL**
+**CLAUDIO FILIPE TEMOTEO DE FARIAS**
