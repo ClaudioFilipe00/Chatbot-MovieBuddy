@@ -17,7 +17,7 @@ Para utilizar o MovieBuddy basta fazer o download do executável chamado MovieBu
 
 **1 - Download direto do executável**
 
-Clique [AQUI](https://drive.google.com/uc?export=download&id=1XJD-UHv8F-SOPEJJ8b7TP88BByuXYCur) para fazer o download do executável, é possível que a seguinte tela apareça:
+Clique [AQUI](https://drive.google.com/file/d/159U3npE-SZNom4j660iN9Sp50yapSpwy/view?usp=sharing) para fazer o download do executável, é possível que a seguinte tela apareça:
 
 ![AVISOVIRUS](/Telas/Aviso_Vírus.jpg)
 
