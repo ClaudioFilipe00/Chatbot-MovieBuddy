@@ -47,13 +47,10 @@ RESPOSTAS_MAIS_SUGESTOES = [
 ]
 MENSAGEM_BEM_VINDO = "**E aí!** Sou o MovieBuddy, seu guia de filmes. O que está buscando?"
 
-# Linha 51 corrigida
+
 base_path_raw = getattr(sys, '_MEIPASS', '.')
 base_path = Path(base_path_raw).resolve()
-# Linha 52
 static_path = base_path / 'static' 
-# ou 
-# static_path = Path(base_path, 'static')
 app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 @app.get("/", response_class=HTMLResponse)

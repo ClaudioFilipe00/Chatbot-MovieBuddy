@@ -2,22 +2,21 @@ const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 
-// URL base do seu servidor FastAPI
 const API_URL = "http://127.0.0.1:8000";
 
-// --- Função Auxiliar: Adiciona uma Mensagem ao Chat ---
+// Função Auxiliar: Adiciona uma Mensagem ao Chat 
 function appendMessage(text, sender) {
-    // Substitui **texto** por <strong>texto</strong> para formatação visual (Markdown)
+    
     const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     
     const div = document.createElement("div");
     div.classList.add("message", sender);
-    div.innerHTML = formattedText; // Usa innerHTML para renderizar o <strong>
+    div.innerHTML = formattedText; 
     chatBox.appendChild(div);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// --- Funções Auxiliares de Filmes ---
+//  Funções Auxiliares 
 function showPopup(filme) {
     const popup = document.createElement("div");
     popup.classList.add("popup");
@@ -57,7 +56,7 @@ function appendFilmes(filmes) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// --- Função Principal: Enviar Mensagem para o Chatbot ---
+//  Função Principal: Enviar Mensagem para o Chatbot 
 async function sendMessage() {
     const text = userInput.value.trim();
     
@@ -84,22 +83,22 @@ async function sendMessage() {
         });
         const data = await res.json();
 
-        // 3. Remove o "Digitando..."
+   
         const last = chatBox.querySelector(".bot:last-child");
         if (last) chatBox.removeChild(last);
 
-        // 4. Adiciona a resposta do bot (texto)
+
         if (data.resposta) {
             appendMessage(data.resposta, "bot");
         } 
 
-        // 5. Adiciona a grade de filmes, se houver
+     
         if (data.filmes && data.filmes.length > 0) {
             appendFilmes(data.filmes);
         }
 
     } catch (err) {
-        // 3. Remove o "Digitando..." e mostra o erro
+     
         const last = chatBox.querySelector(".bot:last-child");
         if (last) chatBox.removeChild(last);
         appendMessage("Erro: Não foi possível conectar ao servidor. Verifique se o FastAPI está rodando.", "bot");
@@ -110,19 +109,19 @@ async function sendMessage() {
     }
 }
 
-// --- Função para Carregar a Mensagem Inicial (Chama sendMessage com lógica de 'iniciar') ---
+//  Função para Carregar a Mensagem Inicial 
 function loadInitialMessage() {
-    // Apenas faz a primeira chamada se o chat estiver vazio
+   
     if (chatBox.children.length === 0) {
         sendMessage(); 
     }
 }
 
 
-// --- Event Listeners ---
+
 sendBtn.addEventListener("click", sendMessage);
 userInput.addEventListener("keydown", e => e.key === "Enter" && sendMessage());
 
 
-// --- CHAMA A MENSAGEM INICIAL AO CARREGAR A PÁGINA ---
+// Chama a mensagem inicial
 document.addEventListener("DOMContentLoaded", loadInitialMessage);
