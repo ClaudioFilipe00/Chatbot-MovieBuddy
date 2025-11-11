@@ -7,9 +7,14 @@ from dotenv import load_dotenv
 from pathlib import Path
 from nlp_engine import extrair_genero_idioma
 
-load_dotenv()
-app = FastAPI()
+base_path_raw = getattr(sys, '_MEIPASS', '.')
+base_path = Path(base_path_raw).resolve()
+env_path = base_path / '.env'
+load_dotenv(env_path)
 
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+
+app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -18,7 +23,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 conversa = {"genero": None, "idioma": None, "paginas": {}, "finalizado": False}
 
 MAPA_IDIOMAS = {
@@ -47,10 +51,7 @@ RESPOSTAS_MAIS_SUGESTOES = [
 ]
 MENSAGEM_BEM_VINDO = "**E aí!** Sou o MovieBuddy, seu guia de filmes. O que está buscando?"
 
-
-base_path_raw = getattr(sys, '_MEIPASS', '.')
-base_path = Path(base_path_raw).resolve()
-static_path = base_path / 'static' 
+static_path = base_path / 'static'
 app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 @app.get("/", response_class=HTMLResponse)
