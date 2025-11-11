@@ -5,7 +5,7 @@ Desenvolvemos esse chatbot com o objetivo de oferecer recomendações personaliz
 Com ele, você não precisa mais perder horas navegando em catálogos infinitos ou se decepcionando com escolhas aleatórias — o MovieBuddy entende o que você quer assistir e entrega as melhores opções com base nas avaliações mais altas do público e da crítica!  
 
 Basta pedir sugestões como:
-> “Quero um filme de ação”  
+> “Quero um filme de ação em Português”  
 ou  
 > “Me indique um bom drama em inglês”  
 
