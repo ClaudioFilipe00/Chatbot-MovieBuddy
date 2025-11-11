@@ -128,7 +128,8 @@ Nosso objetivo é continuar aprimorando o MovieBuddy, incorporando novos recurso
 
 ## AUTORES
 
-Projeto desenvolvido pelos alunos do 6º Semestre do curso de Análise e Desenvolvimento de Sistemas da FATEC Arthur de Azevedo em Mogi-Miim
+Projeto desenvolvido pelos alunos do 6º Semestre do curso de Análise e Desenvolvimento de Sistemas da FATEC Arthur de Azevedo em Mogi-Mirim
 
-**ANA BEATRIZ SANTOS LEAL**
+**ANA BEATRIZ SANTOS LEAL** 
+
 **CLAUDIO FILIPE TEMOTEO DE FARIAS**
